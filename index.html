@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<title>Code Diaries</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		body {margin-top:30px;}
+	</style>
+</head>
+
+<body>
+	
+	<div class="container" > 	
+							<!-- I want the online users to always be visible -->
+							<!-- I want user form, rooms, and chat views to swap -->
+		<div class="col-md-4" id="allUsers">							
+				<div class="well">			
+					<h3>Online Users</h3>
+					<ul class="list-group" id="allUsersList"></ul>
+				</div>
+		</div>
+
+		<div class="col-md-4" id="roomUsers">							
+				<div class="well">			
+					<h3>Room Users</h3>
+					<ul class="list-group" id="roomUsersList"></ul>
+				</div>
+		</div>
+
+		<div class="container">
+		<!-- //////////////////////////////////////////////  -->
+			<div id="userFormArea" class="row">		<!-- This div contains the user form -->
+				<div class="col-md-8">				<!-- div given a column class -->
+					<form id="userForm"> 			<!-- the actual form -->
+						<div class="form-group">	<!-- div for elements within the form -->
+							<label>Enter Username</label>
+							<input class="form-control" autocomplete="off" id="username" />
+							<br />
+							<input type="submit" class="btn btn-primary" value="Login" />
+						</div>
+					</form>
+				</div>
+			</div>
+		<!-- //////////////////////////////////////////////  -->
+			<div id="roomArea" class="row">
+				<div class="col-md-8">				<!-- List of open rooms -->
+					<div class="well">
+						<h3>Open Rooms</h3> 
+							<input type="submit" class="btn btn-primary" id="makeRoom" value="Make Room" />
+							<br><br>
+						<ul class="list-group" id="rooms"></ul>
+					</div>
+				</div>
+			</div>
+		<!-- //////////////////////////////////////////////  -->
+			<div id="messageArea" class="row">
+				<div class="col-md-8">
+					<div class="well">
+						<input type="submit" class="btn btn-warning" id="lobbyButton" value="Lobby" />
+						<h4 id="roomTitle" class="text-center"></h4>
+					</div>
+					<div class="chat" id="chat"></div>
+					<form id="messageForm">   
+						<div class="form-group">
+							<label>Enter Message</label>
+							<textarea class="form-control" id="message"></textarea>
+							<br />
+							<input type="submit" class="btn btn-primary" value="Send Message" />
+						</div>
+					</form>
+				</div>
+			</div>
+		<!-- //////////////////////////////////////////////  -->
+		</div>	
+
+	</div>
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="panels.js" > </script>
+<script type="text/javascript" src="socket.js" > </script>
+
+
+</body>
+</html>

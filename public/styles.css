@@ -1,0 +1,11 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+    
+      #chat { list-style-type: none; margin: 0; padding: 0; }
+      #chat li { padding: 5px 10px; }
+      #users li:nth-child(odd) { background: #eee; }
+      #messageArea {display: none;}
+      #roomArea {display: none;}
+      #roomUsers {display: none;}
+
+
